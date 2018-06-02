@@ -9,7 +9,14 @@ app.post('/jumble/:_shift',function(req,res){
 	var string = req.body.message;
 	var N=req.params._shift
 
-	JumbleApp.send(string,N)
+	var spawn = require("child_process").spawn;
+	var pythonProcess = spawn('python',["Ans1.py", string, N]);
+
+
+	pythonProcess.stdout.on('data', function (data){
+		
+	});
+	//JumbleApp.send(string,N)
 	console.log(a)
 	
 	//res.json(str);
