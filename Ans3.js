@@ -9,7 +9,13 @@ app.post('/jumble/:_shift',function(req,res){
 	var N=req.params._shift
 
 	var ret=Jumbler.Jumble(string,N)
-	res.json({"jumbled":ret});
+	if(ret.includes("Error:")){
+		res.status(400);
+		res.send(ret);
+	}
+	else{
+		res.json({"jumbled":ret});
+	}
 }); 
 
 

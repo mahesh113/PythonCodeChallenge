@@ -12,15 +12,15 @@ function Shift(ch, N) {
 
  module.exports.Jumble=function(strn, N) {
 	if(!(typeof strn === 'string' || strn instanceof String))	{
-		return "Not a string";
+		return "Error: Not a string";
 	}
 	if(isNaN(Number(N,10))) {
-		return  "Not Number"
+		return  "Error: Not Number"
 	} 
 	var n=Number(N, 10);
 
  	if (n<1 || n>1000){
-		return  "N should range between [1-1000]";
+		return  "Error: N should range between [1-1000]";
  	}
 	var retArray ="";
 
