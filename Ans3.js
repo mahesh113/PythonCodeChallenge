@@ -4,7 +4,7 @@ var Jumbler = require('./JumbleHelper');
 var bodyParser = require('body-parser');
 
 app.use(bodyParser.json());
-app.post('/jumble/:_shift',function(req,res){
+app.post('/api/jumble/:_shift',function(req,res){
 	var string = req.body.message;
 	var N=req.params._shift
 
