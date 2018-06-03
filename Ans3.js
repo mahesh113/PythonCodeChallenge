@@ -9,7 +9,6 @@ app.post('/jumble/:_shift',function(req,res){
 	var N=req.params._shift
 
 	var ret=Jumbler.Jumble(string,N)
-	console.log(ret)
 	res.json({"jumbled":ret});
 }); 
 
